@@ -42,3 +42,14 @@ end = time.time()
 time_cost = end - start
 print('Counter should be %d, found %d' % (5 * how_many, counter.count))
 print('Time cost: %.8f' % time_cost)
+
+
+'''
+Without lock:
+    Counter should be 500000, found 263148
+    Time cost: 0.22897410
+
+With lock:
+    Counter should be 500000, found 500000
+    Time cost: 2.76215005
+'''
